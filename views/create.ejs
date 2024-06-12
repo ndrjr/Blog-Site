@@ -1,0 +1,8 @@
+<%- include("partials/header.ejs")  %>
+<h1>What's on your Mind ?</h1>
+<form action="/view" method="POST">
+    <input name="titl" type="text" class="feedback-input" placeholder="Title goes here..." />
+    <textarea name="text" class="feedback-input" placeholder="Write Something"></textarea>
+    <input type="submit" value="SUBMIT" />
+</form>
+<%- include("partials/footer.ejs")  %>

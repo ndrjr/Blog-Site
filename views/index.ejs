@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs")  %>
+
+<div class="home-box">
+    <div>
+        <img class="pic" height="500px" src="/blog.webp">
+    </div>
+    <div class="home-cont">
+        <h1><img class="pic2" height="40px" src="/b-icon.png">     Let's Start your Blog</h1>
+        <form action="/create" method="POST">
+            <input id="but1" type="submit" value="Create Blog">
+        </form>
+        <form action="/view" method="get">
+            <input id="but2" type="submit" value="View Blogs">
+        </form>
+    </div>
+</div>
+
+
+<%- include("partials/footer.ejs")  %>

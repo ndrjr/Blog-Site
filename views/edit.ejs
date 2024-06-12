@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs")  %>
+<div>
+    <form action="/" method="get">
+        <input id="home" type="submit" value="Home">
+    </form>
+</div>
+<h1>Editing &#9997</h1>
+<form action="/edit2" method="post">
+    <input name="t3" type="text" class="feedback-input" placeholder="Title goes here..." value="<%=editt  %>"/>
+    <textarea name="b3" class="feedback-input" placeholder="Write Something"><%=editb  %></textarea>
+    <input type="submit" value="SAVE" />
+    <input type="hidden" name="index3" value="<%= editind %>">
+</form>
+<%- include("partials/footer.ejs")  %>

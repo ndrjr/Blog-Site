@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+
+<div>
+    <form action="/" method="get">
+        <input id="home" type="submit" value="Home">
+    </form>
+</div>
+<% if (!locals.viewt){ %>
+    <h1 id="noblog">No blogs to Show &#128532</h1>
+<%} else{ %>
+    <ul>
+        <% for (let i=0;i<viewt.length;i++){ %>
+            <li>
+                <div class="b-list">
+                    <p id="topics"><%= viewt[i]  %></p>
+                    <div>
+                        <form action="/read" method="post">
+                            <input type="hidden" name="index" value="<%= i %>">
+                            <input type="hidden" name="topic" value="<%= viewt[i] %>">
+                            <input type="hidden" name="blog" value="<%= viewb[i] %>">
+                            <input id="read" type="submit" value="Read">
+                        </form>
+                    </div>
+                    <div>
+                        <form action="/edit" method="post">
+                            <input id="edit" type="submit" value="Edit">
+                            <input type="hidden" name="index2" value="<%= i %>">
+                        </form>
+                    </div>
+                    <div>
+                        <form action="/delete" method="post">
+                            <input id="delete" type="submit" value="Delete">
+                            <input type="hidden" name="index4" value="<%= i %>">
+                        </form>
+                    </div>
+                </div>
+            </li>
+        <% } %>
+    </ul>
+<% } %>
+
+    </body>
+</html>
